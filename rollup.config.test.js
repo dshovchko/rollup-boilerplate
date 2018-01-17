@@ -11,5 +11,5 @@ export default merge({
         chai: "chai"
     },
     external: ["mocha", "chai"],
-    intro: "if (module !== undefined) require(\"source-map-support\").install();"
+    intro: "if (typeof module !== \"undefined\") require(\"source-map-support\").install();"
 }, config);
