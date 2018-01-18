@@ -10,7 +10,7 @@ This is just another one Rollup + Mocha + ESLint + Buble boilerplate/starter pro
  - Automatic JSDom support for Mocha in nodeJS environment
  - Suitable for TDD style of development 
  - Bundling with Rollup, with code map support
- - Buble transpiler
+ - Babel transpiler
  
 
 ## Commands
