@@ -27,3 +27,4 @@ This is just another one Rollup + Mocha + ESLint + Buble boilerplate/starter pro
  - Add `ENV` variable support
  - Add production rollup config
  - Add code coverage tool
+ - Fix source-map-support for browser
