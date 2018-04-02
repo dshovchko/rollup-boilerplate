@@ -5,10 +5,14 @@ import commonjs from "rollup-plugin-commonjs";
 import json from "rollup-plugin-json";
 import multiEntry from "rollup-plugin-multi-entry";
 
+
 export default {
     plugins: [
         json(),
-        babel(babelrc()),
+        babel(babelrc({
+            path: ".babelrc.rollup",
+            addModuleOptions: false 
+        })),
         resolve({ preferBuiltins: true }),
         commonjs(),
         multiEntry()
@@ -18,5 +22,10 @@ export default {
         format: "umd",
         name: "bundle",
         sourcemap: true
-    }
+    },
+    globals: {
+        react: "React",
+        "react-dom": "ReactDOM"
+    },
+    external: ["react", "react-dom"]
 };

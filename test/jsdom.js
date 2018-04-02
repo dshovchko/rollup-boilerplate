@@ -17,4 +17,8 @@ if (typeof global !== "undefined") {
         }
         return null;
     };
+
+    global.navigator = {
+        userAgent: "node.js"
+    };
 }

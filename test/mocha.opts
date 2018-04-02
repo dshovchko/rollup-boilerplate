@@ -1,4 +1,4 @@
---require reify
+--require babel-register
 --require ./test/jsdom
 --reporter nyan
 --recursive

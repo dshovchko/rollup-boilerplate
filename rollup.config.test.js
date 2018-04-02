@@ -1,6 +1,11 @@
 import config from "./rollup.config";
 import merge from "lodash/merge";
 
+
+config.external = [
+    "mocha", "chai", ...config.external, "react-dom/test-utils"
+];
+
 export default merge({
     input: "test/**/*.spec.js",
     output: {
@@ -8,8 +13,8 @@ export default merge({
     },
     globals: {
         mocha: "mocha",
-        chai: "chai"
+        chai: "chai",
+	    "react-dom/test-utils": "ReactTestUtils"
     },
-    external: ["mocha", "chai"],
     intro: "if (typeof module !== \"undefined\") require(\"source-map-support\").install();"
 }, config);
