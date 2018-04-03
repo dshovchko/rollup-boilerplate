@@ -21,4 +21,10 @@ if (typeof global !== "undefined") {
     global.navigator = {
         userAgent: "node.js"
     };
+
+    // disable
+    // Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-polyfills
+    global.requestAnimationFrame = (cb) => {
+        setTimeout(cb, 0);
+    }
 }
